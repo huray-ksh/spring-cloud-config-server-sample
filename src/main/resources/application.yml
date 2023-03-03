@@ -2,8 +2,16 @@ server:
   port: 8088
 
 spring:
+  application:
+    name: config-server
   cloud:
     config:
       server:
         git:
+          uri: https://github.com/huray-ksh/spring-cloud-config-repository-sample
 
+logging:
+  level:
+    root: info
+    web: debug
+    org.springframework.cloud: DEBUG
